@@ -5,8 +5,9 @@ import com.epam.cleandesign.dip.thirdpartyjar.NewsArticleTable;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class PublishService {
+public class PublishService implements NewsPublisher {
 
+    @Override
     public String publishNews(String newsType, List<NewsArticleTable> newsArticles) {
         return newsType + " News:\n" + newsArticles.stream()
                 .map(this::formatArticle)
@@ -17,5 +18,4 @@ public class PublishService {
         return article.getNewsType().equals("Regional") ? "<" + article.getHeadline() + ">" :
                 article.getHeadline() + " -- " + article.getDescription();
     }
-
 }
