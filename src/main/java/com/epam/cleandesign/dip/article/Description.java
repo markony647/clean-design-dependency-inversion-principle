@@ -7,7 +7,7 @@ public class Description {
         this.description = description;
     }
 
-    public String getDescription() {
+    protected String getDescription() {
         return description;
     }
 }

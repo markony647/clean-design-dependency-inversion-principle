@@ -7,7 +7,7 @@ public class Headline {
         this.headline = headline;
     }
 
-    public String getHeadline() {
+    protected String getHeadline() {
         return headline;
     }
 }
