@@ -10,7 +10,6 @@ import java.util.stream.Collectors;
 import static com.epam.cleandesign.dip.article.ArticleType.REGIONAL;
 
 public class NewsArticleDAOImpl implements NewsArticleDAO {
-
     private final ArticleDatabaseRepository articleRepository;
 
     public NewsArticleDAOImpl(ArticleDatabaseRepository articleRepository) {
