@@ -14,20 +14,18 @@ import org.junit.Test;
 
 public class NewsBroadcasterTest {
 
-    private NewsArticleDAO dao;
-    private NewsPublisher publisher;
     private NewsBroadcaster newsBroadcaster;
 
     @Before
     public void setUp() {
-        dao = new NewsArticleDAOImpl(new ArticleDatabaseRepository());
-        publisher = new NewsPublisherService();
+        NewsArticleDAO dao = new NewsArticleDAOImpl(new ArticleDatabaseRepository());
+        NewsPublisher publisher = new NewsPublisherService();
+        newsBroadcaster = new NewsBroadcaster(dao, publisher);
     }
 
     @Test
     public void shouldPublishRegionalNews() {
-        newsBroadcaster = new NewsBroadcaster(dao, publisher, ArticleType.REGIONAL);
-        String regional = newsBroadcaster.broadcastNews();
+        String regional = newsBroadcaster.broadcastNews(ArticleType.REGIONAL);
         Assert.assertTrue(regional.startsWith("Regional News:"));
         Assert.assertTrue(regional.contains("<"));
         Assert.assertTrue(regional.contains(">"));
@@ -35,8 +33,7 @@ public class NewsBroadcasterTest {
 
     @Test
     public void shouldPublishNationalNews() {
-        newsBroadcaster = new NewsBroadcaster(dao, publisher, ArticleType.NATIONAL);
-        String national = newsBroadcaster.broadcastNews();
+        String national = newsBroadcaster.broadcastNews(ArticleType.NATIONAL);
         Assert.assertTrue(national.startsWith("National News:"));
         Assert.assertFalse(national.contains("<"));
         Assert.assertFalse(national.contains(">"));

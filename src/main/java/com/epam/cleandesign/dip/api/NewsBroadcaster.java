@@ -11,15 +11,13 @@ public class NewsBroadcaster {
 
     private final NewsArticleDAO newsArticleDAO;
     private final NewsPublisher publisher;
-    private final ArticleType articleType;
 
-    public NewsBroadcaster(NewsArticleDAO newsArticleDAO, NewsPublisher publisher, ArticleType articleType) {
+    public NewsBroadcaster(NewsArticleDAO newsArticleDAO, NewsPublisher publisher) {
         this.newsArticleDAO = newsArticleDAO;
         this.publisher = publisher;
-        this.articleType = articleType;
     }
 
-    public String broadcastNews() {
+    public String broadcastNews(ArticleType articleType) {
         List<AbstractNewsArticle> newsArticles = newsArticleDAO.findByNewsType(articleType);
         return publisher.publishNews(articleType, newsArticles);
     }
