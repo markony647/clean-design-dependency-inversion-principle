@@ -2,7 +2,6 @@ package com.epam.cleandesign.dip.publishing;
 
 import com.epam.cleandesign.dip.article.AbstractNewsArticle;
 import com.epam.cleandesign.dip.article.ArticleType;
-import com.epam.cleandesign.dip.thirdpartyjar.NewsArticleTable;
 
 import java.util.List;
 import java.util.stream.Collectors;

@@ -2,8 +2,6 @@ package com.epam.cleandesign.dip;
 
 import com.epam.cleandesign.dip.api.NewsBroadcaster;
 import com.epam.cleandesign.dip.article.ArticleType;
-import com.epam.cleandesign.dip.article.NationalNewsNewsArticle;
-import com.epam.cleandesign.dip.article.RegionalNewsNewsArticle;
 import com.epam.cleandesign.dip.dao.NewsArticleDAO;
 import com.epam.cleandesign.dip.dao.NewsArticleDAOImpl;
 import com.epam.cleandesign.dip.publishing.NewsPublisher;

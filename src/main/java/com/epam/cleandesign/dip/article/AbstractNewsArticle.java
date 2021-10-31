@@ -12,8 +12,6 @@ public abstract class AbstractNewsArticle {
 
     public abstract String format();
 
-    public abstract ArticleType getType();
-
     public String getHeadline() {
         return headline.getHeadline();
     }
