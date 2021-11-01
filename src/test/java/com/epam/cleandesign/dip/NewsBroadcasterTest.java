@@ -3,7 +3,7 @@ package com.epam.cleandesign.dip;
 import com.epam.cleandesign.dip.api.NewsBroadcaster;
 import com.epam.cleandesign.dip.article.ArticleType;
 import com.epam.cleandesign.dip.dao.NewsArticleDAO;
-import com.epam.cleandesign.dip.dao.NewsArticleDAOImpl;
+import com.epam.cleandesign.dip.database.ArticleDatabaseRepository;
 import com.epam.cleandesign.dip.publishing.NewsPublisher;
 import com.epam.cleandesign.dip.publishing.NewsPublisherService;
 import org.junit.Assert;
@@ -16,7 +16,7 @@ public class NewsBroadcasterTest {
 
     @Before
     public void setUp() {
-        NewsArticleDAO dao = new NewsArticleDAOImpl(new ArticleDatabaseRepository());
+        NewsArticleDAO dao = new ArticleDatabaseRepository();
         NewsPublisher publisher = new NewsPublisherService();
         newsBroadcaster = new NewsBroadcaster(dao, publisher);
     }
