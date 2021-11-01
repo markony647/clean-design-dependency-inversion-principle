@@ -2,7 +2,7 @@ package com.epam.cleandesign.dip.article;
 
 public class RegionalNewsNewsArticle extends AbstractNewsArticle {
 
-    public RegionalNewsNewsArticle(Headline headline, Description description) {
+    public RegionalNewsNewsArticle(String headline, String description) {
         super(headline, description);
     }
 

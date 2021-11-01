@@ -2,7 +2,7 @@ package com.epam.cleandesign.dip.article;
 
 public class NationalNewsNewsArticle extends AbstractNewsArticle {
 
-    public NationalNewsNewsArticle(Headline headline, Description description) {
+    public NationalNewsNewsArticle(String headline, String description) {
         super(headline, description);
     }
 

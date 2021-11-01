@@ -2,10 +2,10 @@ package com.epam.cleandesign.dip.article;
 
 public abstract class AbstractNewsArticle {
 
-    private final Headline headline;
-    private final Description description;
+    private final String headline;
+    private final String description;
 
-    public AbstractNewsArticle(Headline headline, Description description) {
+    public AbstractNewsArticle(String headline, String description) {
         this.headline = headline;
         this.description = description;
     }
@@ -13,10 +13,10 @@ public abstract class AbstractNewsArticle {
     public abstract String format();
 
     public String getHeadline() {
-        return headline.getHeadline();
+        return headline;
     }
 
     public String getDescription() {
-        return description.getDescription();
+        return description;
     }
 }

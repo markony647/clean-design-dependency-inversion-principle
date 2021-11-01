@@ -29,8 +29,8 @@ public class NewsArticleDAOImpl implements NewsArticleDAO {
     }
 
     private AbstractNewsArticle convertSingle(NewsArticleTable articleTable) {
-        Headline headline = new Headline(articleTable.getHeadline());
-        Description description = new Description(articleTable.getDescription());
+        String headline = articleTable.getHeadline();
+        String description = articleTable.getDescription();
         if (articleTable.getNewsType().equals(REGIONAL.getValue())) {
             return new RegionalNewsNewsArticle(headline, description);
         }
