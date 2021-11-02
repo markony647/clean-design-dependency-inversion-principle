@@ -4,7 +4,7 @@ import com.epam.cleandesign.dip.article.AbstractNewsArticle;
 import com.epam.cleandesign.dip.article.ArticleType;
 import com.epam.cleandesign.dip.article.NationalNewsNewsArticle;
 import com.epam.cleandesign.dip.article.RegionalNewsNewsArticle;
-import com.epam.cleandesign.dip.dao.NewsArticleDAO;
+import com.epam.cleandesign.dip.dao.NewsArticleDAOImpl;
 import com.epam.cleandesign.dip.thirdpartyjar.EntityManager;
 import com.epam.cleandesign.dip.thirdpartyjar.NewsArticleTable;
 
@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 import static com.epam.cleandesign.dip.article.ArticleType.REGIONAL;
 
-public class ArticleDatabaseRepository extends NewsArticleDAO {
+public class ArticleDatabaseRepository extends NewsArticleDAOImpl {
 
     private EntityManager entityManager;
 
