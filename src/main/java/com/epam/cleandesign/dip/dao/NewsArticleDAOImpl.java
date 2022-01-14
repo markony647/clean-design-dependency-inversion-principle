@@ -5,7 +5,9 @@ import com.epam.cleandesign.dip.article.ArticleType;
 
 import java.util.List;
 
-public interface NewsArticleDAO {
+public abstract class NewsArticleDAOImpl implements NewsArticleDAO {
 
-    List<AbstractNewsArticle> findByNewsType(ArticleType articleType);
+    @Override
+    public abstract List<AbstractNewsArticle> findByNewsType(ArticleType articleType);
+
 }
